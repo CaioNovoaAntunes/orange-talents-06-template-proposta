@@ -27,6 +27,9 @@ public class Proposta {
         this.endereco = endereco;
         this.salario = salario;
     }
+    @Deprecated
+    public Proposta() {
+    }
 
     public Long getId() {
         return this.id;

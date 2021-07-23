@@ -2,6 +2,7 @@ package com.br.proposta.modelo;
 
 
 import com.br.proposta.customvalidation.CPF_CNPJ;
+import com.br.proposta.validation.NotExists;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 
 public class NovaPropostaRequest {
     @CPF_CNPJ
+    @NotExists(domainClass = Proposta.class,fieldName = "documento",message = "Documento informado já existe proposta ativa")
     @NotBlank
     private String documento;
     @NotBlank

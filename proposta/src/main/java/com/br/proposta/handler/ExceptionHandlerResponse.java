@@ -1,4 +1,4 @@
-package com.br.proposta.validation;
+package com.br.proposta.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
