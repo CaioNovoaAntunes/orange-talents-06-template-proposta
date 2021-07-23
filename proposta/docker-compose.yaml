@@ -1,9 +1,24 @@
 version: '3'
 services:
-  mysql:
+
+
+  proposta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lukinhasssss/proposta
+    ports:
+      - 8081:8080
+    restart: always
+    depends_on:
+      - meu_db
+    environment:
+      DATABASE_URL: jdbc:mysql://meu_db:3306/proposta
+
+  meu_db:
     image: mysql:latest
     ports:
-      - 3507:3306
+      - 3307:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: user

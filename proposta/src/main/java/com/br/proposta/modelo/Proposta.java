@@ -1,5 +1,8 @@
 package com.br.proposta.modelo;
 
+import com.br.proposta.analise.AnalisaCliente;
+import com.br.proposta.status.StatusProposta;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -12,6 +15,8 @@ public class Proposta {
     @Column(nullable = false)
     private String documento;
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private StatusProposta status = StatusProposta.ELEGIVEL;
     private String email;
     @Column(nullable = false)
     private String nome;
@@ -38,4 +43,16 @@ public class Proposta {
     public String getEmail() {
         return this.email;
     }
+
+    public void setaStatus(AnalisaCliente analise){
+        try {
+            SolicitacaoRequest solicitacaoRequest = new SolicitacaoRequest(this.documento, this.nome, this.id);
+            NovaPropostaResponse response = analise.sendSolicitation(solicitacaoRequest);
+            StatusProposta status =response.getResultadoSolicitacao().conversorStatus();
+            this.status = status;
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
+    }
+
 }
