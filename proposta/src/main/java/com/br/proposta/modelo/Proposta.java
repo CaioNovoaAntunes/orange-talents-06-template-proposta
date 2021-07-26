@@ -17,6 +17,7 @@ public class Proposta {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusProposta status = StatusProposta.ELEGIVEL;
+    private String numeroCartao;
     private String email;
     @Column(nullable = false)
     private String nome;
@@ -24,6 +25,7 @@ public class Proposta {
     private String endereco;
     @Column(nullable = false)
     private BigDecimal salario;
+
 
     public Proposta(String documento, String email, String nome, String endereco, BigDecimal salario) {
         this.documento = documento;
@@ -55,4 +57,11 @@ public class Proposta {
         }
     }
 
+    public String getNumeroCartao() {
+        return numeroCartao;
+    }
+
+    public void setaCartao(String cartao) {
+        this.numeroCartao = cartao;
+    }
 }

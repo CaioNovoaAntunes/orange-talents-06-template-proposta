@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: lukinhasssss/proposta
+    image: caionovoa/proposta
     ports:
       - 8081:8080
     restart: always
