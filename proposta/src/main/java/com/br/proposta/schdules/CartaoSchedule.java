@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 @EnableAsync
 @EnableScheduling
-public class CartaoSchdule {
+public class CartaoSchedule {
 
     @Autowired
     PropostaRepository propostaRepository;

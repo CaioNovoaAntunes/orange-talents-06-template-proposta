@@ -64,4 +64,12 @@ public class Proposta {
     public void setaCartao(String cartao) {
         this.numeroCartao = cartao;
     }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public StatusProposta getStatus() {
+        return status;
+    }
 }

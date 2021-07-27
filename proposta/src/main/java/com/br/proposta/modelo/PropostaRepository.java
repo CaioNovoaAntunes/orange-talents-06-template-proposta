@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface PropostaRepository extends JpaRepository<Proposta, Long> {
     List<Proposta> findByStatusAndNumeroCartaoIsNull(StatusProposta elegivel);
+    Proposta findByDocumento(String documento);
 }

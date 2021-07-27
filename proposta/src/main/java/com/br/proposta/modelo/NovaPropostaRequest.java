@@ -36,28 +36,13 @@ public class NovaPropostaRequest {
         this.salario = salario;
     }
 
+
+
+    public Proposta conversor(){
+        return new Proposta(this.documento,this.nome,this.endereco,this.email,this.salario);
+    }
+
     public String getDocumento() {
         return documento;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public BigDecimal getSalario() {
-        return salario;
-    }
-
-    public Proposta toProposta() {
-
-        return new Proposta(this.documento, this.email, this.nome, this.endereco, this.salario);
     }
 }
