@@ -1,4 +1,5 @@
-package com.br.proposta.analise;
+package com.br.proposta.integrations;
+
 
 import com.br.proposta.modelo.NovaPropostaResponse;
 import com.br.proposta.modelo.SolicitacaoRequest;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 @FeignClient(name = "analisa",
-        url = "http://localhost:9999/api/solicitacao")
+        url = "${analise.url}")
 public interface AnalisaCliente {
 
     @CircuitBreaker(name = "analisa", fallbackMethod = "analiseFallback")

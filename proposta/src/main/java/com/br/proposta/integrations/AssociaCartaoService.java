@@ -1,4 +1,4 @@
-package com.br.proposta.cartao;
+package com.br.proposta.integrations;
 
 import com.br.proposta.dto.CartaoResponse;
 

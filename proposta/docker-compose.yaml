@@ -13,10 +13,16 @@ services:
     depends_on:
       - meu_db
     environment:
-      DATABASE_URL: jdbc:mysql://meu_db:3306/proposta
+      - DB_URL=jdbc:mysql://meu_db:3306/proposta
+      - DB_PASSWORD=1234
+      - DB_USERNAME=root
+      - ANALISE_URL=http://analise:9999
+      - CONTAS_URL=http://contas:8888
 
   meu_db:
     image: mysql:latest
+    volumes:
+      - mysql-volume:/var/lib/mysql
     ports:
       - 3307:3306
     environment:

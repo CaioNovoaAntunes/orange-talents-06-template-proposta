@@ -1,4 +1,4 @@
-package com.br.proposta.analise;
+package com.br.proposta.integrations;
 
 import com.br.proposta.modelo.NovaPropostaResponse;
 import com.br.proposta.modelo.SolicitacaoRequest;
@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class AnalisaClienteService implements AnalisaCliente {
+
     @Override
     public NovaPropostaResponse sendSolicitation(@RequestBody SolicitacaoRequest request) {
         return null;

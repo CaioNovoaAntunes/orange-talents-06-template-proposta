@@ -1,6 +1,6 @@
 package com.br.proposta.schdules;
 
-import com.br.proposta.cartao.AssociaCartao;
+import com.br.proposta.integrations.AssociaCartao;
 import com.br.proposta.dto.CartaoResponse;
 import com.br.proposta.modelo.Proposta;
 import com.br.proposta.modelo.PropostaRepository;
