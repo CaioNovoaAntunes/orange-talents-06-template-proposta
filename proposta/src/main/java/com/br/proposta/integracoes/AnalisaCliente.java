@@ -1,8 +1,8 @@
-package com.br.proposta.integrations;
+package com.br.proposta.integracoes;
 
 
 import com.br.proposta.modelo.NovaPropostaResponse;
-import com.br.proposta.modelo.SolicitacaoRequest;
+import com.br.proposta.dto.SolicitacaoRequest;
 import com.br.proposta.status.StatusSolicitacao;
 import feign.FeignException;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;

@@ -1,11 +1,12 @@
-package com.br.proposta.modelo;
+package com.br.proposta.controller;
 
-import com.br.proposta.integrations.AnalisaCliente;
+import com.br.proposta.integracoes.AnalisaCliente;
+import com.br.proposta.modelo.NovaPropostaRequest;
+import com.br.proposta.modelo.Proposta;
+import com.br.proposta.repositorios.PropostaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.transaction.Transactional;

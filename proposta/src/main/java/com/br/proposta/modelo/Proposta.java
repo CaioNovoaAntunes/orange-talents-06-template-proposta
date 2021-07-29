@@ -1,6 +1,7 @@
 package com.br.proposta.modelo;
 
-import com.br.proposta.integrations.AnalisaCliente;
+import com.br.proposta.dto.SolicitacaoRequest;
+import com.br.proposta.integracoes.AnalisaCliente;
 import com.br.proposta.status.StatusProposta;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

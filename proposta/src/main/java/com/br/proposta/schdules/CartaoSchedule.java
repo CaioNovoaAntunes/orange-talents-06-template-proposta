@@ -1,9 +1,9 @@
 package com.br.proposta.schdules;
 
-import com.br.proposta.integrations.AssociaCartao;
+import com.br.proposta.integracoes.AssociaCartao;
 import com.br.proposta.dto.CartaoResponse;
 import com.br.proposta.modelo.Proposta;
-import com.br.proposta.modelo.PropostaRepository;
+import com.br.proposta.repositorios.PropostaRepository;
 import com.br.proposta.status.StatusProposta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

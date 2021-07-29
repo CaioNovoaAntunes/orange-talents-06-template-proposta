@@ -1,4 +1,4 @@
-package com.br.proposta.modelo;
+package com.br.proposta.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

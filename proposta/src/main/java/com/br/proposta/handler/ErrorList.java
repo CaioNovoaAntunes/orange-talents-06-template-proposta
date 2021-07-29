@@ -1,5 +1,7 @@
 package com.br.proposta.handler;
 
+
+
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;

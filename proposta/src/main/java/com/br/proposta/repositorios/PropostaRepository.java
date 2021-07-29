@@ -1,6 +1,7 @@
-package com.br.proposta.modelo;
+package com.br.proposta.repositorios;
 
 
+import com.br.proposta.modelo.Proposta;
 import com.br.proposta.status.StatusProposta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

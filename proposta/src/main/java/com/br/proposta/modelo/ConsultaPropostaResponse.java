@@ -4,17 +4,15 @@ import com.br.proposta.status.StatusProposta;
 
 public class ConsultaPropostaResponse {
 
-    private String nome;
+
     private StatusProposta status;
 
-    public ConsultaPropostaResponse(String nome, StatusProposta status) {
-        this.nome = nome;
-        this.status = status;
+    public ConsultaPropostaResponse(Proposta proposta) {
+
+        this.status = proposta.getStatus();
     }
 
-    public String getNome() {
-        return nome;
-    }
+
 
     public StatusProposta getStatus() {
         return status;
