@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
 
 
@@ -18,6 +18,8 @@ services:
       - DB_USERNAME=root
       - ANALISE_URL=http://analise:9999
       - CONTAS_URL=http://contas:8888
+      - KEYCLOAK_ISSUER_URI=http://keycloak:18080/auth/realms/master
+      - KEYCLOAK_JWKS_URI=http://keycloak:18080/auth/realms/master/protocol/openid-connect/certs
 
   meu_db:
     image: mysql:latest
