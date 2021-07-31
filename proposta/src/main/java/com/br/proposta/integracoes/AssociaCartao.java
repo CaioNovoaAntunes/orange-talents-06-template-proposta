@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "associa",
-        url = "${cargoes.url}")
+        url = "${cartoes.url}")
 public interface AssociaCartao {
 
     @GetMapping
@@ -13,5 +13,6 @@ public interface AssociaCartao {
 
     @GetMapping("/{id}")
     CartaoResponse findByNumberCard(@PathVariable String id);
+
 
 }
