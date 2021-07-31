@@ -11,11 +11,8 @@ import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 
 public class NovaBiometriaRequest {
-    @Valid
     @NotBlank
     @Pattern(regexp = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$", message = "Ocorreu um erro ao cadastrar a biometria!")
-
-
     private String impressaoDigital;
     @JsonCreator(mode = Mode.PROPERTIES)
     public NovaBiometriaRequest(String impressaoDigital) {

@@ -12,7 +12,7 @@ public interface BloqueioCartao {
     @GetMapping("/{id}")
     CartaoResponse getCartao(@PathVariable String id);
 
-    /*    @CircuitBreaker(name = "bloquearCartao", fallbackMethod = "analiseFallback")*/
+
     @PostMapping("/{id}/bloqueios")
     void bloquearCartao(@PathVariable String id, Object sistemaResponsavel);
 
