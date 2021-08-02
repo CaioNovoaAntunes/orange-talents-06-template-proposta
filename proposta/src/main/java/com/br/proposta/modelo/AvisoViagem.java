@@ -15,9 +15,9 @@ public class AvisoViagem {
     @Column(nullable = false)
     private String numeroCartao;
     @Column(nullable = false)
-    private String viagemDestino;
+    private String destino;
     @Future
-    private LocalDate dataFinal;
+    private LocalDate validoAte;
 
 
     @CreationTimestamp
@@ -30,11 +30,11 @@ public class AvisoViagem {
     private String userAgent;
 
 
-    public AvisoViagem(String numeroCartao, String viagemDestino, LocalDate dataFinal, String ipRequest, String userAgent) {
+    public AvisoViagem(String numeroCartao, String destino, LocalDate validoAte, String ipRequest, String userAgent) {
         this.numeroCartao = numeroCartao;
-        this.viagemDestino = viagemDestino;
-        this.dataFinal = dataFinal;
-        this.createdAt = createdAt;
+        this.destino = destino;
+        this.validoAte = validoAte;
+        this.createdAt  = LocalDateTime.now() ;
         this.ipRequest = ipRequest;
         this.userAgent = userAgent;
     }
@@ -53,12 +53,12 @@ public class AvisoViagem {
         return numeroCartao;
     }
 
-    public String getViagemDestino() {
-        return viagemDestino;
+    public String getDestino() {
+        return destino;
     }
 
-    public LocalDate getDataFinal() {
-        return dataFinal;
+    public LocalDate getValidoAte() {
+        return validoAte;
     }
 
     public LocalDateTime getCreatedAt() {

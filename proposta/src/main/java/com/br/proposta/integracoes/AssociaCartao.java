@@ -1,5 +1,6 @@
 package com.br.proposta.integracoes;
 
+import com.br.proposta.dto.AvisoViagemRequest;
 import com.br.proposta.dto.CartaoResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -15,5 +16,10 @@ public interface AssociaCartao {
     CartaoResponse findByNumberCard(@PathVariable String id);
 
 
+    @PostMapping("/{id}/avisos")
+    void enviaAvisoViagem(@PathVariable String id, @RequestBody AvisoViagemRequest request);
 
 }
+
+
+

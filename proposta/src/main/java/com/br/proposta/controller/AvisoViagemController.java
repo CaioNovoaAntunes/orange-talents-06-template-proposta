@@ -34,7 +34,7 @@ public class AvisoViagemController {
             return ResponseEntity.notFound().build();
 
         }
-
+        associaCartao.enviaAvisoViagem(id,request);
         AvisoViagem avisoViagem = request.conversor(id, httpRequest.getRemoteAddr(), userAgent);
         avisoViagemRepository.save(avisoViagem);
 
