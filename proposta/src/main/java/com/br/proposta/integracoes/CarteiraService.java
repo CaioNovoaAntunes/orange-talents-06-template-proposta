@@ -7,7 +7,7 @@ import java.util.Map;
 public class CarteiraService implements CriaCarteira {
 
     @Override
-    public CarteiraReponse paypal(String id, Map<String, Object> request) {
+    public CarteiraReponse carteiras(String id, Map<String, Object> request) {
         return null;
     }
 }

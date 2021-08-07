@@ -13,5 +13,7 @@ import java.util.Map;
 public interface CriaCarteira {
 
     @PostMapping("/{id}/carteiras")
-    CarteiraReponse paypal(@PathVariable String id, @RequestBody Map<String, Object> request);
+    CarteiraReponse carteiras(@PathVariable String id, @RequestBody Map<String, Object> request);
+
+
 }
