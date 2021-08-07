@@ -3,6 +3,7 @@ package com.br.proposta.modelo;
 
 import com.br.proposta.customvalidation.CPF_CNPJ;
 import com.br.proposta.validation.NotExists;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -39,7 +40,8 @@ public class NovaPropostaRequest {
 
 
     public Proposta conversor(){
-        return new Proposta(this.documento,this.nome,this.endereco,this.email,this.salario);
+        BCryptPasswordEncoder encoder=new BCryptPasswordEncoder();
+        return new Proposta(encoder.encode(this.documento),this.nome,this.endereco,this.email,this.salario);
     }
 
     public String getDocumento() {
